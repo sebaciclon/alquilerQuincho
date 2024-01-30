@@ -12,7 +12,7 @@
 <body>
     
     <x-app-layout>
-           
+        
         <div class="p-3 table-responsive">
             <h2 class="mb-3"><b>Alquileres cargados en el sistema</b></h2>
             <div  class="mb-3 mt-3 btn btn-success">
@@ -74,12 +74,14 @@
                     @endforelse
                 </tbody>
             </table>
-            <div>
-                
+            <div class="d-flex justify-content-center">
+                {{$alquileres->links()}}
             </div>
             <a class="mb-3 mt-3 btn btn-primary" href="{{route('dashboard')}}">Volver</a>
         </div>
+        @include('footer.footer')
     </x-app-layout>
+    
     <script>
         var res = function() {
             var not = confirm("Estas seguro de eiminar el alquiler?");

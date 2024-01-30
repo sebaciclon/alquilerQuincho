@@ -18,7 +18,9 @@ class AlquilerController extends Controller
     /** Muesta todos los alquileres */
     public function index()
     {
-        $alquileres = Alquiler::all();
+        //$alquileres = Alquiler::all();
+        
+        $alquileres = Alquiler::orderBy('fechaAlquiler', 'desc')->paginate(5);
         return view('alquiler.alquileres', ['alquileres' => $alquileres]);
     }
 
