@@ -1,5 +1,6 @@
+<x-app-layout>
 <x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
+    <form method="POST" action="{{ route('usuarios-guardar') }}">
         @csrf
 
         <!-- Name -->
@@ -45,8 +46,9 @@
             </a>
 
             <x-primary-button class="ms-4">
-                {{ __('Register') }}
+                {{ __('Registrar') }}
             </x-primary-button>
         </div>
     </form>
 </x-guest-layout>
+</x-app-layout>
