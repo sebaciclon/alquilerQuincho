@@ -15,9 +15,11 @@
         
         <div class="p-3 table-responsive">
             <h2 class="mb-3"><b>Alquileres cargados en el sistema</b></h2>
+            
             <div  class="mb-3 mt-3 btn btn-success">
                 <a href="{{route('crear-alquiler')}}">Registrar alquiler</a>
             </div>
+            
             
 
             <table class="table-striped table-bordered table-hover table">
@@ -78,6 +80,7 @@
                 {{$alquileres->links()}}
             </div>
             <a class="mb-3 mt-3 btn btn-primary" href="{{route('dashboard')}}">Volver</a>
+            
         </div>
        
     </x-app-layout>
