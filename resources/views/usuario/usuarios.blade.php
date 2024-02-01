@@ -46,7 +46,7 @@
             
             <a class="mb-3 mt-3 btn btn-primary" href="{{route('dashboard')}}">Volver</a>
         </div>
-        @include('footer.footer')
+        
     </x-app-layout>
     
     <script>

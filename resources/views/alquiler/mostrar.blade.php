@@ -206,7 +206,7 @@
                                     
                                 </div>
                                 <div class="mt-3 btn btn-danger d-flex align-items-center justify-content-center">
-                                    <button type="submit">Actualizar</button>
+                                    <button type="submit" onclick=" return res()">Actualizar</button>
                                 </div>
                             </form> 
                             <div >
@@ -219,6 +219,33 @@
             </div>
         </div>
     </x-app-layout>
+    <script>
+        var res = function() {
+            var not = confirm("Confirma los cambios en el alquiler?");
+            return not;
+        }
+        //$('success').submit(function(e) {
+        //e.preventDefault();
+        
+        //Swal.fire({
+        //title: "Estas seguro de eliminar este alquiler?",
+        //text: "No podras revertir este cambio!",
+        //icon: "warning",
+        //showCancelButton: true,
+        //confirmButtonColor: "#3085d6",
+        //cancelButtonColor: "#d33",
+        //confirmButtonText: "Si, eliminar!"
+        //}).then((result) => {
+        //if (result.isConfirmed) {
+        //    Swal.fire({
+        //    title: "Eliminado!",
+        //    text: "El alquiler ha sido eliminado.",
+        //    icon: "success"
+        //    });
+        //}
+        
+        //});
+    </script> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

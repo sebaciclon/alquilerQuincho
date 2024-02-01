@@ -32,5 +32,6 @@
                 {{ $slot }}
             </main>
         </div>
+        @include('footer.footer')
     </body>
 </html>

@@ -10,7 +10,7 @@
 </head>
 <body>
     <x-app-layout>
-        <div class="container">
+        <div class=" container p-3">
             <div class="row">
                 <div class="col-xl-12">
                     <div class="card mb-4">
@@ -197,8 +197,8 @@
                                         </div>
 
                                         <div class="col-3">
-                                            <label class="form-label" for="basic-default-fullname">Resto <span class="text-muted">(obligatorio)</span></label>
-                                            <input type="text" name="resto" class="form-control @error('resto') is-invalid @enderror" id="basic-default-nombreCompleto" value="{{ old('resto') }}"/>
+                                            <label class="form-label" for="basic-default-fullname">Resto</span></label>
+                                            <input readonly type="text" name="resto" class="form-control @error('resto') is-invalid @enderror" id="basic-default-nombreCompleto" value="{{ old('resto') }}"/>
                                             @error('resto')
                                                 <div class="invalid-feedback">
                                                     {{$message}}
