@@ -8,10 +8,100 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Alquileres') }}
+                    <x-nav-link :href="route('alquileres')" :active="request()->routeIs('alquileres')">
+                        {{ __('Mostrar Alquileres') }}
                     </x-nav-link>
                 </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('crear-alquiler')" :active="request()->routeIs('crear-alquiler')">
+                        {{ __('Registrar Alquiler') }}
+                    </x-nav-link>
+                </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('buscar-alquileres')" :active="request()->routeIs('buscar-alquileres')" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        {{ __('Buscar / Editar Alquiler') }}
+                    </x-nav-link>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Buscar alquiler</h1>
+                                <div class="btn-close"  data-bs-dismiss="modal" aria-label="Close">
+                                    <button type="button"></button>
+                                </div>
+                                
+                                </div>
+                                <div class="modal-body">
+                                    <form method="GET" action="{{route('buscar-alquileres')}}">
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label">Buscar por nombre</label>
+                                            <input type="text" name="busquedaPorNombre" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                            @error('busquedaPorNombre')
+                                                <div class="invalid-feedback">
+                                                    {{$message}}
+                                                </div>
+                                            @enderror
+                                        </div>
+                                        <div  class="btn btn-primary">
+                                            <button type="submit">Buscar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="btn btn-secondary" data-bs-dismiss="modal">
+                                        <button type="button" >Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+
+                </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('buscar-fecha-disponible')" :active="request()->routeIs('buscar-fecha-disponible')" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                        {{ __('Buscar Fecha Disponible') }}
+                    </x-nav-link>
+                    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Buscar fecha disponible</h1>
+                                <div class="btn-close"  data-bs-dismiss="modal" aria-label="Close">
+                                    <button type="button"></button>
+                                </div>
+                                
+                                </div>
+                                <div class="modal-body">
+                                    <form method="GET" action="{{route('buscar-fecha-disponible')}}">
+                                        <div class="mb-3">
+                                            <label for="exampleInputPassword1" class="form-label">Buscar por fecha</label>
+                                            <input type="date" name="busquedaPorFecha" class="form-control" id="exampleInputPassword1">
+                                            @error('busquedaPorFecha')
+                                                <div class="invalid-feedback">
+                                                    {{$message}}
+                                                </div>
+                                            @enderror
+                                        </div>
+                                        <div  class="btn btn-primary">
+                                            <button type="submit">Buscar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="btn btn-secondary" data-bs-dismiss="modal">
+                                        <button type="button" >Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('usuarios')" :active="request()->routeIs('usuarios')">
                         {{ __('Usuarios') }}

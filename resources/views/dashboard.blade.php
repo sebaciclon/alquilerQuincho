@@ -9,12 +9,13 @@
 </head>
 <body>
     <x-app-layout>
-        <div class="p-3">
+        <h1 class="d-flex justify-content-center mt-5">PONER IMAGEN DE FONDO</h1>
+        <!-- <div class="p-3">
             <a class="mb-5 mt-5 btn btn-primary d-flex align-items-center justify-content-center" href="{{route('crear-alquiler')}}">Registrar alquiler</a>
             <a class="mb-5 btn btnPrincipal btn btn-danger d-flex align-items-center justify-content-center" href="{{route('alquileres')}}">Mostrar alquileres</a>
             <a  data-bs-toggle="modal" data-bs-target="#exampleModal"class="mb-5 mt-5 btn btn-primary d-flex align-items-center justify-content-center">Buscar / Editar alquiler</a>
             
-            <!-- Modal de buscar/editar alquileres por nombre-->
+            Modal de buscar/editar alquileres por nombre
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -50,7 +51,7 @@
                 </div>
             </div>
             <a data-bs-toggle="modal" data-bs-target="#exampleModal1" class="mb-5 btn btnPrincipal btn btn-danger d-flex align-items-center justify-content-center">Buscar fecha disponible</a>
-            <!-- Modal de buscar/editar alquileres por fecha-->
+            Modal de buscar/editar alquileres por fecha
             <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -85,7 +86,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
     </x-app-layout>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>

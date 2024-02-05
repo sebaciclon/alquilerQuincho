@@ -35,12 +35,13 @@ class AlquilerController extends Controller
         $socio = Socio::all();
         $horaDesde = Hora::all();
         $horaHasta = Hora::all();
-        return view('alquiler.alquileres', ['alquileres' => $alquileres, 
+        return view('alquiler.alquileresNombre', ['alquileres' => $alquileres, 
                                         'dias'=>$dias,
                                         'horario'=>$horario,
                                         'socio'=>$socio,
                                         'horaDesde' => $horaDesde,
-                                        'horaHasta' => $horaHasta]);
+                                        'horaHasta' => $horaHasta,
+                                        'buscar' => $buscar]);
     }
     
 
@@ -55,12 +56,13 @@ class AlquilerController extends Controller
         $socio = Socio::all();
         $horaDesde = Hora::all();
         $horaHasta = Hora::all();
-        return view('alquiler.fechaDisponible', ['alquileres' => $alquileres, 
+        return view('alquiler.alquileresFecha', ['alquileres' => $alquileres, 
                                         'dias'=>$dias,
                                         'horario'=>$horario,
                                         'socio'=>$socio,
                                         'horaDesde' => $horaDesde,
-                                        'horaHasta' => $horaHasta]);
+                                        'horaHasta' => $horaHasta,
+                                        'buscar' => $buscar]);
     }
 
     /** Muestra un formulario para crear un alquiler */
