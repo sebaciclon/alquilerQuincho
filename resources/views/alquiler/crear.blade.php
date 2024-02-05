@@ -67,10 +67,10 @@
 
                                         <div class="col-3">
                                             <label class="form-label" for="basic-default-fullname">Socio<span class="text-muted">(obligatorio)</span></label>
-                                            <select name="socio_id" class="form-select @error('socio_id') is-invalid @enderror" id="basic-default-nombreCompleto" >
+                                            <select name="socio_id" class="form-select @error('socio_id') is-invalid @enderror" id="basic-default-nombreCompleto">
                                                 <option value=" ">-- Seleccione --</option>
                                                 @foreach($socio as $tipo)
-                                                    <option value="{{$tipo->id}}">{{$tipo->nombre}}</option>
+                                                    <option value="{{$tipo->id}}" {{ old('socio_id') == $tipo->id ? 'selected' : '' }}>{{$tipo->nombre}}</option>
                                                 @endforeach
                                             </select>
                                             @error('socio_id')
@@ -87,7 +87,7 @@
                                             <select name="dia_id" class="form-select @error('dia_id') is-invalid @enderror" id="basic-default-nombreCompleto" >
                                                 <option value=" ">-- Seleccione --</option>
                                                 @foreach($dias as $tipo)
-                                                    <option value="{{$tipo->id}}">{{$tipo->nombre}}</option>
+                                                    <option value="{{$tipo->id}}" {{ old('dia_id') == $tipo->id ? 'selected' : '' }}>{{$tipo->nombre}}</option>
                                                 @endforeach
                                             </select>
                                             @error('dia_id')
@@ -102,7 +102,7 @@
                                             <select name="horario_id" class="form-select @error('horario_id') is-invalid @enderror" id="basic-default-nombreCompleto" >
                                                 <option value=" ">-- Seleccione --</option>
                                                 @foreach($horario as $tipo)
-                                                    <option value="{{$tipo->id}}">{{$tipo->nombre}}</option>
+                                                    <option value="{{$tipo->id}}" {{ old('horario_id') == $tipo->id ? 'selected' : '' }}>{{$tipo->nombre}}</option>
                                                 @endforeach
                                             </select>
                                             @error('horario_id')
@@ -117,7 +117,7 @@
                                             <select name="hora_desde_id" class="form-select @error('hora_desde_id') is-invalid @enderror" id="basic-default-nombreCompleto" >
                                                 <option value=" ">-- Seleccione --</option>
                                                 @foreach($horaDesde as $tipo)
-                                                    <option value="{{$tipo->id}}">{{$tipo->nombre}}</option>
+                                                    <option value="{{$tipo->id}}" {{ old('hora_desde_id') == $tipo->id ? 'selected' : '' }}>{{$tipo->nombre}}</option>
                                                 @endforeach
                                             </select>
                                             @error('hora_desde_id')
@@ -132,7 +132,7 @@
                                             <select name="hora_hasta_id" class="form-select @error('hora_hasta_id') is-invalid @enderror" id="basic-default-nombreCompleto" >
                                                 <option value=" ">-- Seleccione --</option>
                                                 @foreach($horaHasta as $tipo)
-                                                    <option value="{{$tipo->id}}">{{$tipo->nombre}}</option>
+                                                    <option value="{{$tipo->id}}" {{ old('hora_hasta_id') == $tipo->id ? 'selected' : '' }}>{{$tipo->nombre}}</option>
                                                 @endforeach
                                             </select>
                                             @error('hora_hasta_id')
