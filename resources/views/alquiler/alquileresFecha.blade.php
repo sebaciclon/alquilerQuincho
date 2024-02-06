@@ -22,10 +22,12 @@
                         <tr>
                             <th class="bg-primary text-white" scope="col">FECHA ALQUILER</th>
                             <th class="bg-primary text-white" scope="col">NOMBRE</th>
+                            <th class="bg-primary text-white" scope="col">TELEFONO</th>
                             <th class="bg-primary text-white" scope="col">DIA</th>
                             <th class="bg-primary text-white" scope="col">HORARIO</th>
                             <th class="bg-primary text-white" scope="col">DESDE</th>
                             <th class="bg-primary text-white" scope="col">HASTA</th>
+                            <th class="bg-primary text-white" scope="col">SEÑA</th>
                             <th class="bg-primary text-white" scope="col">CREADO</th>
                             
                         </tr>
@@ -35,10 +37,12 @@
                             <tr>
                                 <td>{{$alq->fechaAlquiler}}</td>
                                 <td>{{$alq->nombre}}</td>
+                                <td>{{$alq->telefono}}</td>
                                 <td>{{$alq->dia->nombre}}</td> {{-- VER --}}
                                 <td>{{$alq->horario->nombre}}</td> {{-- VER --}}
                                 <td>{{$alq->desdeHora}} Hs.</td> {{-- VER --}}
                                 <td>{{$alq->hastaHora}} Hs.</td> {{-- VER --}}
+                                <td>{{$alq->seña}}</td> {{-- VER --}}
                                 <td>{{$alq->created_at}}</td>
                             </tr>
                             
